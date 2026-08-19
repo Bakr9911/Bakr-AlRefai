@@ -16,21 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 3. Reset and reorder experience cards dynamically
             reorderExperienceCards(selectedRole);
-            
-            // 4. Reorder whole sections based on active role view rules
+
+            // 4. Show/hide whole sections that don't apply to this role (e.g. IT hides Experience & Volunteering)
+            updateSectionVisibility(selectedRole);
+
+            // 5. Reorder whole sections based on active role view rules
             reorderSections(selectedRole);
 
-            // 5. Trigger smooth fade-in animation for visible sections
+            // 6. Trigger smooth fade-in animation for visible sections
             animateVisibleSections();
         });
     });
 
     function filterElements(selector, role) {
         const items = document.querySelectorAll(selector);
-        
+
         items.forEach(item => {
-            if (item.classList.contains('role-btn') || 
-                item.classList.contains('about-card') || 
+            if (item.classList.contains('role-btn') ||
+                item.classList.contains('about-card') ||
                 item.classList.contains('dynamic-section')) return;
 
             const rolesAttr = item.getAttribute('data-role');
@@ -98,7 +101,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        matchingCards.forEach(card => container.prepend(card));
+        // Move matching cards to the front IN ORDER. Appending each one in turn
+        // (rather than repeatedly prepending) preserves their original relative
+        // order instead of reversing it.
+        matchingCards.forEach(card => container.appendChild(card));
+    }
+
+    function updateSectionVisibility(role) {
+        const sections = document.querySelectorAll('.dynamic-section');
+
+        sections.forEach(section => {
+            const hideFor = section.getAttribute('data-hide-for');
+
+            if (role !== 'all' && hideFor && hideFor.split(' ').includes(role)) {
+                section.classList.add('hidden');
+            } else {
+                section.classList.remove('hidden');
+            }
+        });
     }
 
     function reorderSections(role) {
@@ -121,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         visibleSections.forEach((section, index) => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(15px)';
-            
+
             setTimeout(() => {
                 section.style.transition = 'all 0.4s ease';
                 section.style.opacity = '1';
