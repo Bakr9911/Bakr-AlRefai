@@ -26,7 +26,6 @@
                 <button class="role-btn active" data-role="all">All Roles</button>
                 <button class="role-btn" data-role="designer">Graphic Designer</button>
                 <button class="role-btn" data-role="it">Junior IT / Developer</button>
-                <button class="role-btn" data-role="customer-care">Customer Care</button>
                 <button class="role-btn" data-role="business">Business & Management</button>
             </div>
         </section>
@@ -45,9 +44,6 @@
             <p class="about-text about-card hidden" data-role="it">
                 Junior IT Developer and recent university graduate specialized in software fundamentals, database architecture, and technical problem-solving. Eager to leverage a background in systems operations and development within a dynamic engineering team.
             </p>
-            <p class="about-text about-card hidden" data-role="customer-care">
-                Customer-focused professional with extensive international and local experience in call center support, sales, and client relationship management. Adept at resolving customer inquiries efficiently and operating specialized center software systems.
-            </p>
             <p class="about-text about-card hidden" data-role="business">
                 Operations and Management professional with years of hands-on experience overseeing daily office workflows, process management, and team coordination. Strong background in balancing administrative efficiency with client satisfaction.
             </p>
@@ -58,7 +54,8 @@
     <div class="sections-container">
 
         <!-- Education Section -->
-        <section class="section dynamic-section" id="section-education" data-order-all="1" data-order-designer="2" data-order-it="1" data-order-customer-care="2" data-order-business="1">
+        <section class="section dynamic-section" id="section-education"
+                  data-order-all="1" data-order-designer="4" data-order-it="1" data-order-business="1">
             <h2>Education:</h2>
             <div class="education-details">
                 <p><strong style="color:#ffffff;">Syrian Virtual University</strong></p>
@@ -68,7 +65,9 @@
         </section>
 
         <!-- Work Experience Section -->
-        <section class="section dynamic-section" id="section-experience" data-order-all="2" data-order-designer="1" data-order-it="4" data-order-customer-care="1" data-order-business="2">
+        <section class="section dynamic-section" id="section-experience"
+                  data-order-all="2" data-order-designer="1" data-order-it="4" data-order-business="2"
+                  data-hide-for="it">
             <h2>Work Experience:</h2>
             <div class="work-grid-2col experience-container">
 
@@ -86,9 +85,9 @@
                     </ul>
                 </div>
 
-                <!-- Card 2: IT / Business -->
-                <div class="styled-box experience-card" data-role="it business">
-                    <div class="card-title">Office Manager / Corporate Treasurer</div>
+                <!-- Card 2: Business -->
+                <div class="styled-box experience-card" data-role="business">
+                    <div class="card-title">Office Manager</div>
                     <div class="card-meta">Ajyad AlSham — Damascus, Syria | [11/2021 – 06/2025]</div>
                     <ul>
                         <li>Oversee the day-to-day functioning of the office and ensure processes run smoothly.</li>
@@ -99,24 +98,29 @@
                     </ul>
                 </div>
 
-                <!-- Card 3: Customer Care -->
-                <div class="styled-box experience-card" data-role="customer-care">
+                <!-- Card 3: Business -->
+                <div class="styled-box experience-card" data-role="business">
                     <div class="card-title">Call Centre Agent</div>
                     <div class="card-meta">Advanced Cure Diagnostic Center — Abu Dhabi, UAE | [12/2023 – 06/2024]</div>
                     <ul>
-                        <li>Answer incoming calls and respond to customer's emails.</li>
-                        <li>Manage and resolve customer complaints efficiently while maintaining customer satisfaction.</li>
-                        <li>Operate specialized center software systems and keep up with duties according to time scale.</li>
+                        <li>Manage and resolve customer complaints.</li>
+                        <li>Maintaining optimal workflow.</li>
+                        <li>OOperating and managing customers needs.</li>
+                        <li>Keep up with duties according to the time scale.</li>
+                        <li>Hands-on experience on a specialized system only available to the centre staff.</li>
                     </ul>
                 </div>
 
-                <!-- Card 4: Customer Care / Business -->
-                <div class="styled-box experience-card" data-role="customer-care business">
-                    <div class="card-title">Seller</div>
+                <!-- Card 4: Business -->
+                <div class="styled-box experience-card" data-role="business">
+                    <div class="card-title">Sales Person</div>
                     <div class="card-meta">Ghassan Book Store — Damascus, Syria | [10/2018 – 09/2020]</div>
                     <ul>
-                        <li>Keep up with clients and help customers with their needs.</li>
-                        <li>Achieve customer satisfaction and process sales transactions accurately.</li>
+                        <li>Greeted and assisted walk-in customers, helping them locate products and make informed purchasing decisions.</li>
+                        <li>Built rapport with regular clients, encouraging repeat visits and customer loyalty.</li>
+                        <li>Processed sales transactions accurately and efficiently, handling cash and payment methods with care.</li>
+                        <li>Maintained a well-organized and presentable shop floor to support a smooth customer experience.</li>
+                        <li>Resolved customer questions and minor concerns on the spot to ensure a positive shopping experience.</li>
                     </ul>
                 </div>
 
@@ -124,94 +128,110 @@
         </section>
 
         <!-- Skills & Languages Section -->
-        <section class="section dynamic-section" id="section-skills" data-order-all="3" data-order-designer="3" data-order-it="2" data-order-customer-care="3" data-order-business="3">
+        <section class="section dynamic-section" id="section-skills"
+                  data-order-all="3" data-order-designer="3" data-order-it="3" data-order-business="5">
             <h2>Skills & Languages:</h2>
             <div class="pills-container">
-                <span class="pill-item" data-role="designer it customer-care business">Arabic (Native)</span>
-                <span class="pill-item" data-role="designer it customer-care business">English (C1 Proficient)</span>
-                <span class="pill-item" data-role="it">C# Programming</span>
-                <span class="pill-item" data-role="designer">Graphic Design & AI Tools</span>
-                <span class="pill-item" data-role="designer it customer-care business">Google Suite & MS Office</span>
-                <span class="pill-item" data-role="business it">Project Management</span>
-                <span class="pill-item" data-role="customer-care business">Customer Service & Sales</span>
-                <span class="pill-item" data-role="designer it customer-care business">Slack, Teams, Zoom, Discord</span>
+                <span class="pill-item" data-role="designer it business">Arabic (Native)</span>
+                <span class="pill-item" data-role="designer it business">English (C1 Proficient)</span>
+                <span class="pill-item" data-role="designer it business">Google Suite & MS Office</span>
+                <span class="pill-item" data-role="designer it business">Teams, Zoom, Discord</span>
+                <span class="pill-item" data-role="designer it business">Problem Solving</span>
+                <span class="pill-item" data-role="designer">AI Design Tools</span>
+                <span class="pill-item" data-role="designer">Photoshop</span>
+                <span class="pill-item" data-role="designer">Illustrator</span>
+                <span class="pill-item" data-role="it">Vibe Coding</span>
+                <span class="pill-item" data-role="it business">Research & Analysis</span>
+                <span class="pill-item" data-role="business">CRMs</span>
+                <span class="pill-item" data-role="business">Notion</span>
+                <span class="pill-item" data-role="business designer">Communication Skills</span>
+                <span class="pill-item" data-role="general">C# Programming</span>
+                <span class="pill-item" data-role="general">Project Management</span>
+                <span class="pill-item" data-role="general">Customer Service & Sales</span>
             </div>
         </section>
 
         <!-- Certificates Section -->
-        <section class="section dynamic-section" id="section-certificates" data-order-all="4" data-order-designer="4" data-order-it="3" data-order-customer-care="4" data-order-business="4">
+        <section class="section dynamic-section" id="section-certificates"
+                  data-order-all="5" data-order-designer="5" data-order-it="2" data-order-business="4">
             <h2>Certificates:</h2>
             <div class="grid-container">
-                <div class="styled-box" data-role="it business">
+                <div class="styled-box" data-role="business">
                     <p><strong style="color:#ffffff;">Introduction to Project Management</strong> (10/10/2024)</p>
-                    <p>Created Scope Statements, RACI Charts, and timelines in Asana.</p>
+                    <p>Created Scope Statements, RACI Charts, and timelines in Asana.</p> <a href="https://coursera.org/verify/1DNCEXS4NH3I" style="color: #00f0ff; font-size: small;">View certificate</a>
                 </div>
-                <div class="styled-box" data-role="designer it customer-care business">
+                <div class="styled-box" data-role="designer it business">
                     <p><strong style="color:#ffffff;">EF SET English Certificate (C1 Advanced)</strong> (25/05/2023)</p>
-                    <p>Achieved 66/100 on the EF SET scale across core language skills.</p>
+                    <p>Achieved 66/100 on the EF SET scale across core language skills.</p> <a href="https://www.efset.org/cert/sTxwMU" style="color: #00f0ff; font-size: small;">View certificate</a>
                 </div>
                 <div class="styled-box" data-role="it">
                     <p><strong style="color:#ffffff;">Programming in C#</strong> (04/12/2022)</p>
-                    <p>Fundamentals of C#, variables, constants, and arrays in Visual Studio.</p>
+                    <p>Fundamentals of C#, variables, constants, and arrays in Visual Studio.</p> <a href="https://coursera.org/verify/EN59Z6VA3NND" style="color: #00f0ff; font-size: small;">View certificate</a>
                 </div>
             </div>
         </section>
 
         <!-- Volunteering Section -->
-        <section class="section dynamic-section" id="section-volunteering" data-order-all="5" data-order-designer="5" data-order-it="5" data-order-customer-care="5" data-order-business="5">
+        <section class="section dynamic-section" id="section-volunteering"
+                  data-order-all="4" data-order-designer="2" data-order-it="5" data-order-business="3"
+                  data-hide-for="it">
             <h2>Volunteering:</h2>
             <div class="work-grid-2col">
-                <div class="styled-box volunteering-card" data-role="designer business">
+                
+                <!-- DESIGNER VERSION: Focused on visual assets and team collaboration -->
+                <div class="styled-box volunteering-card" data-role="designer">
+                    <div class="card-title">TEDx Damascus (Design Team)</div>
+                    <div class="card-meta">Damascus, Syria | [12/2025 – Present]</div>
+                    <ul>
+                        <li>Conceptualized and designed high-impact visual assets and social media campaigns alongside the creative team to drive event engagement.</li>
+                        <li>Produced event-specific collateral, including speaker introduction slides and program layouts, ensuring strict adherence to TED brand guidelines.</li>
+                    </ul>
+                </div>
+                <div class="styled-box volunteering-card" data-role="designer">
+                    <div class="card-title">TEDx AlQassaa (Design Team)</div>
+                    <div class="card-meta">Damascus, Syria | [31/05/2025 – 12/2025]</div>
+                    <ul>
+                        <li>Designed graphic assets for social media campaigns, contributing to visual content for TEDx AlQassaa's monthly calendar.</li>
+                        <li>Created high-impact visual assets, including the event program layout and speaker introduction slides, ensuring brand compliance for the TEDx event.</li>
+                    </ul>
+                </div>
+
+                <!-- BUSINESS VERSION: Focused on execution, logistics, tasks, and project execution -->
+                <div class="styled-box volunteering-card" data-role="business">
                     <div class="card-title">TEDx Damascus</div>
                     <div class="card-meta">Damascus, Syria | [12/2025 – Present]</div>
                     <ul>
-                        <li>Conceptualize and design high-impact visual assets for social media campaigns to drive event engagement.</li>
-                        <li>Produce event-specific collateral, including speaker introduction slides and program layouts, ensuring adherence to TED guidelines.</li>
-                        <li>Collaborate with the organizing committee to manage logistics and provide real-time on-site support during live events.</li>
+                        <li>Coordinated with the organizing committee to manage logistics, timelines, and provide real-time on-site operational support during live events.</li>
+                        <li>Executed administrative workflows and managed team task distribution to ensure smooth event execution.</li>
+                        <li>Apply professional communication skills to coordinate between team leaders and volunteers to achieve set goals.</li>
                     </ul>
                 </div>
-                <div class="styled-box volunteering-card" data-role="designer business">
+                <div class="styled-box volunteering-card" data-role="business">
                     <div class="card-title">TEDx AlQassaa</div>
                     <div class="card-meta">Damascus, Syria | [31/05/2025 – 12/2025]</div>
                     <ul>
-                        <li>Coordinated comprehensive preparation and logistics for 150 attendees and 8 speakers at the National Library.</li>
-                        <li>Designed graphic assets, monthly calendars, program layouts, and speaker slides.</li>
-                        <li>Managed end-to-end event execution and teamwork deliverables for annual community events.</li>
+                        <li>Coordinated the comprehensive preparation and logistics, ensuring smooth execution for 150 attendees and 8 speakers, which took place in the National Library in Damascus.</li>
+                        <li>Contributed to the successful execution and logistics of "TEDx AlQassaa Salon 3", an interactive event fostering dialogue between speakers and the audience, that took place in Damascus National Museum</li>
+                        <li>Managed end-to-end event execution, cross-functional teamwork deliverables, and resource allocation.</li>
                     </ul>
                 </div>
-                <div class="styled-box volunteering-card" data-role="it business customer-care">
-                    <div class="card-title">WLAT (Volunteer Team)</div>
+                <div class="styled-box volunteering-card" data-role="business">
+                    <div class="card-title">WLAT</div>
                     <div class="card-meta">Damascus, Syria | [03/2017 – 05/2019]</div>
                     <ul>
-                        <li>Coordinated plans with team leaders, scheduled meetings, and managed community projects.</li>
-                        <li>Led volunteers for World Peace Day event operations and school construction logistics in Ain-Tarma.</li>
+                        <li>Coordinated a successful World Peace Day event, attracting hundreds of attendees, and generating significant community engagement.</li>
+                        <li>Led a team of volunteers to ensure smooth event execution, including logistics, and guest management.</li>
+                        <li>Led a team of volunteers on a construction site to help build a school in Ain-Tarma by managing tasks, calendars, and logistics between the team and the town stakeholders.</li>
+                        <li>Achieved recognizable success for our goal of helping the community.</li>
                     </ul>
                 </div>
+
             </div>
         </section>
 
-        <!-- Hobbies Section -->
-        <section class="section dynamic-section" id="section-hobbies" data-order-all="6" data-order-designer="6" data-order-it="6" data-order-customer-care="6" data-order-business="6">
-            <h2>Hobbies & Interests:</h2>
-            <div class="grid-container">
-                <div class="styled-box hobby-card" data-role="designer it customer-care business">
-                    <p><strong style="color:#ffffff;">Violin</strong></p>
-                    <p>Learning the violin, practicing regularly, and aiming to play professionally.</p>
-                </div>
-                <div class="styled-box hobby-card" data-role="designer it customer-care business">
-                    <p><strong style="color:#ffffff;">Gaming</strong></p>
-                    <p>Enjoy playing games from time to time as a great stress reliever.</p>
-                </div>
-                <div class="styled-box hobby-card" data-role="designer it customer-care business">
-                    <p><strong style="color:#ffffff;">Reading</strong></p>
-                    <p>Always looking out for good books across fields of interest.</p>
-                </div>
-            </div>
-        </section>
+    </div> <!-- End of sections-container -->
 
-    </div>
-
-    <!-- Contact Section -->
+    <!-- Contact Section (Permanently fixed at the bottom) -->
     <section id="contact" class="section">
         <h2>Contact:</h2>
         <div class="contact-grid">
@@ -221,7 +241,7 @@
             </div>
             <div>
                 <p><strong>Location:</strong> Damascus, Syria</p>
-                <p data-role="it business customer-care designer"><strong>Portfolio:</strong> <a href="https://www.behance.net/bakral-refai" target="_blank">Behance Profile</a></p>
+                <p data-role="designer"><strong>Portfolio:</strong> <a href="https://www.behance.net/bakral-refai" target="_blank">Behance Profile</a></p>
             </div>
         </div>
     </section>
